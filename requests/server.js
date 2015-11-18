@@ -7,11 +7,26 @@ app.use(bodyParser.json());
 
 app.get('/name/:name', function(req,res) {
 	console.log('Incoming request: GET');
+	console.log('Request body: ', req.body);
 	console.log('name: ', req.params.name);
+});
+
+app.get('/age/:age', function(req,res) {
+	console.log('Incoming request: GET');
+	console.log('Request body: ', req.body);
+	console.log('age: ', req.params.age);
+});
+
+app.get('/name/:name/age/:age', function(req,res) {
+	console.log('Incoming request: GET');
+	console.log('Request body: ', req.body);
+	console.log('name: ', req.params.name);
+	console.log('age: ', req.params.age);
 });
 
 app.delete('/name/:name', function(req,res) {
 	console.log('Incoming request: DELETE');
+	console.log('Request body: ', req.body);
 	console.log('name: ', req.params.name);
 });
 
