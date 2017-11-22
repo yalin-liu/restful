@@ -14,6 +14,7 @@ app.get('/', function(req,res) {
 });
 
 // Path 1
+// curl -X GET localhost:8099/name/peter
 app.get('/name/:name', function(req,res) {
 	console.log('Incoming request: ' + req.method);
 	console.log('Path: ' + req.path);
@@ -23,6 +24,7 @@ app.get('/name/:name', function(req,res) {
 });
 
 // Path 2
+// curl -X GET localhost:8099/age/10
 app.get('/age/:age', function(req,res) {
 	console.log('Incoming request: ' + req.method);
 	console.log('Path: ' + req.path);
@@ -32,6 +34,7 @@ app.get('/age/:age', function(req,res) {
 });
 
 // Path 3
+// curl -X GET localhost:8099/name/peter/age/10
 app.get('/name/:name/age/:age', function(req,res) {
 	console.log('Incoming request: ' + req.method);
 	console.log('Path: ' + req.path);
