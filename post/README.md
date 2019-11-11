@@ -13,7 +13,7 @@ npm start
 ```
 ### Testing
 1. Send post request using `form.html`
-2. Send post request using the following `curl` commands:
+2. Send post request using one the following `curl` commands:
 ```
 curl --header "Content-Type: application/json" \
 --request POST \
