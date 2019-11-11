@@ -18,6 +18,8 @@ npm start
 curl --header "Content-Type: application/json" \
 --request POST \
 --data '{"name":"coco","age":10}' localhost:8099
-
+```
+or
+```
 curl -v -X POST --data "name=coco&age=10" localhost:8099
 ```
