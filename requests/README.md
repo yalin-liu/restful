@@ -1,5 +1,5 @@
-# POST requests
-This example demonstrates the use of `body-parser` middleware to extract POST request parameters.
+# RESTful requests
+This example demonstrates the CRUD RESTful services for resource `users`
 
 ## Getting Started
 
@@ -12,14 +12,7 @@ npm install
 npm start
 ```
 ### Testing
-1. Send post request using `form.html`
-2. Send post request using one the following `curl` commands:
+#### Create a `user`
 ```
-curl --header "Content-Type: application/json" \
---request POST \
---data '{"name":"coco","age":10}' localhost:8099
-```
-or
-```
-curl -v -X POST --data "name=coco&age=10" localhost:8099
+curl -H "Content-Type: application/json" -X POST -d '{"name":"peter","age": 20}' localhost:8099/users
 ```
