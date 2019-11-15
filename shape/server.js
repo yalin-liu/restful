@@ -3,15 +3,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-/*
-app.get('/api/square/area/:length', (req,res) => {
-	let result = {};
-	result.length = req.params.length;
-	result.area = result.length ** 2;
-	res.status(200).json(result);
-});
-*/
-
+// curl --header "accept:application/json" "localhost:8099/api/square/area/17"
 app.get('/square/area/:length', (req,res) => {
 	var result = {};
 	result.shape = 'square';
@@ -24,7 +16,5 @@ app.get('/square/area/:length', (req,res) => {
 		res.status(200).render('answer.ejs',{answer: result});
 	}
 })
-
-// curl --header "accept:application/json" "localhost:8099/api/square/area/17"
 
 app.listen(process.env.PORT || 8099);
