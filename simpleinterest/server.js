@@ -3,8 +3,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-// curl localhost:8099/simpleinterest/10000/0.01/10"
-// curl --header "accept:application/json" "localhost:8099/simpleinterest/10000/0.01/10"
+// curl -v -X GET localhost:8099/simpleinterest/10000/0.01/10
+// curl -H "Content-Type: application/json" -v -X GET "localhost:8099/simpleinterest/10000/0.01/10"
 app.get('/simpleinterest/:principal/:rate/:time', function(req,res) {
 	let r = new SimpleInterest(Number(req.params.principal), Number(req.params.rate), Number(req.params.time));
 	if (req.headers['accept'] == 'application/json') {		
